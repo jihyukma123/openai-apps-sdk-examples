@@ -173,8 +173,8 @@ for (const name of builtNames) {
   const html = `<!doctype html>
 <html>
 <head>
-  <script type="module" src="${normalizedBaseUrl}/${name}.js"></script>
-  <link rel="stylesheet" href="${normalizedBaseUrl}/${name}.css">
+  <script type="module" src="./${name}-${h}.js"></script>
+  <link rel="stylesheet" href="./${name}-${h}.css">
 </head>
 <body>
   <div id="${name}-root"></div>
