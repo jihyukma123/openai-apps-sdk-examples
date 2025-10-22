@@ -316,9 +316,9 @@ try:
     from starlette.staticfiles import StaticFiles
     
     if ASSETS_DIR.exists():
-        # 루트 경로에서 정적 파일 제공 (connector URL이 루트에서 JS 파일 요청)
-        app.mount("/", StaticFiles(directory=str(ASSETS_DIR), html=True), name="assets")
-        logger.info(f"Static files mounted from {ASSETS_DIR}")
+        # /assets 경로에 정적 파일 제공
+        app.mount("/assets", StaticFiles(directory=str(ASSETS_DIR)), name="static")
+        logger.info(f"Static files mounted at /assets from {ASSETS_DIR}")
     else:
         logger.warning(f"Assets directory not found: {ASSETS_DIR}")
 except Exception as e:
