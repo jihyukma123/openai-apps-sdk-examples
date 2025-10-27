@@ -96,6 +96,15 @@ widgets: List[PizzazWidget] = [
         invoked="Served a fresh list",
         html=_load_widget_html("pizzaz-list"),
         response_text="Rendered a pizza list!",
+    ),
+    PizzazWidget(
+        identifier="pizza-recommend",
+        title="Recommend Pizza for User",
+        template_uri="",
+        invoking="추천 생성 중...",
+        invoked="추천 생성 완료.",
+        html="",
+        response_text="추천 생성 완료.",
     )
 ]
 
